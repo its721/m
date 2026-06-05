@@ -538,7 +538,7 @@ const modalFbLink = document.getElementById('modalFbLink');
 
 let iframeLoadTimeout = null;
 
-function openModal(url, thumbEl) {
+function openModal(url, thumbEl, ratio = '9/16') {
     modalBody.innerHTML = '';
     modalFallback.style.display = 'none';
     modalBody.style.display = 'block';
@@ -553,7 +553,7 @@ function openModal(url, thumbEl) {
     iframe.setAttribute('allowfullscreen', 'true');
     iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
     iframe.style.width = '100%';
-    iframe.style.aspectRatio = '9/16';
+    iframe.style.aspectRatio = ratio;
     iframe.style.border = 'none';
     iframe.style.display = 'block';
 
